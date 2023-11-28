@@ -1,15 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+// components
+import NavBar from './components/NavBar';
+
+
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          E-commerce Brandão
-        </p>
-      </header>
+      <NavBar />
+      <h2>As ofertas da semana</h2>
     </div>
   );
 }
