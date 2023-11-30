@@ -1,9 +1,10 @@
 import React from 'react'
+import CartWidget from './CartWidget'
 
 function NavBar() {
     return (
         <header className='bg-[#171717] text-white p-5' >
-            <nav className='container mx-auto md flex justify-between'>
+            <nav className='container mx-auto md flex justify-between items-center'>
                 <h1 className='place-self-start font-serif text-xl'><a>Mucca Cookies</a></h1>
                 <ul className='flex gap-10'>
                     <li className='group'>
@@ -37,7 +38,11 @@ function NavBar() {
                         </nav>
                     </li>
                 </ul>
+            
+                <CartWidget />
             </nav>
+
+            
         </header>
     )
 }
