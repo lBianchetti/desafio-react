@@ -1,11 +1,13 @@
 import React from 'react'
 import Button from './Button'
+import ItemCount from './ItemCount'
 
 function Item( { title,  } ){
     return (
-        <div className='p-4 p-4 min-w-[20%] h-[1000px] bg-zinc-50 border-zinc-100 border '>
+        <div className='p-4 min-w-[20%] h-[1000px] bg-zinc-50 border-zinc-100 border flex flex-col'>
             {title}
-            <Button text={"Comprar"}/>
+
+            <ItemCount stock={5} initial={1} />
         </div>
     )
 }
@@ -21,6 +23,7 @@ function ItemListContainer() {
         <Item title={"Nutella"} />
         <Item title={"Branco"} />
         <Item title={"Brigadeiro"} />
+
     </div>
   )
 }
