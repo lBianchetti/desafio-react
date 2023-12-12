@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemCount from './ItemCount'
+import ItemDetailContainer from './ItemDetailContainer'
 
 function Item({ id, title, price, pictureUrl }) {
     return (
@@ -8,6 +9,7 @@ function Item({ id, title, price, pictureUrl }) {
         {title}
 
         <ItemCount stock={5} initial={1} />
+        <ItemDetailContainer />
     </div>
     )
 }
