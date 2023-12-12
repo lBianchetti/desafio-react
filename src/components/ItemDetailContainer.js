@@ -3,9 +3,6 @@ import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer() {
 
-  const [dados, setDados] = React.useState(null);
-  const [carregando, setCarregando] = React.useState(null);
-
   function getItem() {
     return {
       desc: "description",
