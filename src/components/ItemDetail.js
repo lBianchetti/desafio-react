@@ -1,12 +1,19 @@
 import React from 'react'
+import ItemCount from './ItemCount'
 
 function ItemDetail( {desc, imgUrl, preco} ) {
 
   return (
     <div>
-        <p>{desc}</p>
+        
         <img src={imgUrl}></img>
-        <span>{preco}</span>
+        
+        
+        <p>{desc}</p>
+        <span>R$ {preco}</span>
+
+        <ItemCount stock={5} initial={1} />
+
     </div>
   )
 }

@@ -1,17 +1,27 @@
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // components
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter className="App">
+
       <NavBar />
-      <ItemListContainer />
-    </div>
+
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:id' element={<ItemListContainer />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
+
+          <Route path='*' element={<h2>Página não encontrada</h2>} />
+        </Routes>
+    </BrowserRouter>
   );
 }
 

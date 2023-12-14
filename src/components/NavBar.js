@@ -1,39 +1,41 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import CartWidget from './CartWidget'
 
 function NavBar() {
     return (
         <header className='bg-[#171717] text-white p-5' >
             <nav className='container mx-auto md flex justify-between items-center'>
-                <h1 className='place-self-start font-serif text-xl'><a>Mucca Cookies</a></h1>
+                <h1 className='place-self-start font-serif text-xl'><Link to="/">Mucca Cookies</Link></h1>
                 <ul className='flex gap-10'>
                     <li className='group'>
-                        <a href="#">Tradicionais</a>
+                        <Link to="/category/tradicionais" >Tradicionais</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-20px] bg-[#171717] rounded-md'>
                             <ul>
-                                <li><a href="#">Chocolate</a></li>
-                                <li><a href="#">M&M's</a></li>
-                                <li><a href="#">Branco</a></li>
+                                <li><Link to="">Chocolate</Link></li>
+                                <li><Link to="">M&M's</Link></li>
+                                <li><Link to="">Branco</Link></li>
                             </ul>
                         </nav>
                     </li>
                     <li className='group'>
-                        <a href="#">Especiais</a>
+                        <Link to="/category/especiais">Especiais</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-30px] bg-[#171717] rounded-md'>
                             <ul>
-                                <li><a href="#">Limão</a></li>
-                                <li><a href="#">Macadâmia</a></li>
+                                <li><Link to="">Limão</Link></li>
+                                <li><Link to="">Macadâmia</Link></li>
                             </ul>
                         </nav>
                     </li>
                     <li className='group'>
-                        <a href="#">Recheados</a>
+                        <Link to="/category/recheados">Recheados</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-50px] bg-[#171717] rounded-md'>
                             <ul>
-                                <li><a href="#">Nutella</a></li>
-                                <li><a href="#">Brigadeiro</a></li>
-                                <li><a href="#">Brigadeiro Branco</a></li>
-                                <li><a href="#">Ninho</a></li>
+                                <li><Link to="">Brigadeiro</Link></li>
+                                <li><Link to="">Brigadeiro Branco</Link></li>
+                                <li><Link to="">Ninho</Link></li>
+                                <li><Link to="">Nutella</Link></li>
                             </ul>
                         </nav>
                     </li>

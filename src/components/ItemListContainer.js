@@ -2,8 +2,10 @@ import React from 'react'
 import ItemList from './ItemList'
 
 function ItemListContainer() {
-  return (
-    <ItemList />
+  return ( 
+    <div className='container mx-auto md flex'>
+      <ItemList />
+    </div>
   )
 }
 
