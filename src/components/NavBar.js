@@ -23,8 +23,9 @@ function NavBar() {
                         <Link to="/category/especiais">Especiais</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-30px] bg-[#171717] rounded-md'>
                             <ul>
-                                <li><Link to="">Limão</Link></li>
-                                <li><Link to="">Macadâmia</Link></li>
+                                <li><Link to="/limao">Limão</Link></li>
+                                <li><Link to="/macadamia">Macadâmia</Link></li>
+                                <li><Link to="/frutas">Frutas Vermelhas</Link></li>
                             </ul>
                         </nav>
                     </li>
@@ -33,7 +34,6 @@ function NavBar() {
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-50px] bg-[#171717] rounded-md'>
                             <ul>
                                 <li><Link to="">Brigadeiro</Link></li>
-                                <li><Link to="">Brigadeiro Branco</Link></li>
                                 <li><Link to="">Ninho</Link></li>
                                 <li><Link to="">Nutella</Link></li>
                             </ul>

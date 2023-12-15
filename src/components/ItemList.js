@@ -1,24 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Item from './Item'
 
 
-    function ItemList({ item }) {
+    function ItemList() {
 
-        const cookies = [
-            { id: 1, title: "M&M's", category:"tradicional", price: 0, pictureUrl: "", string:"mem" },
-            { id: 2, title: "Gotas de Chocolate", category:"tradicional", price: 0, pictureUrl: "",string:"gotas" },
-            { id: 3, title: "Ninho", category:"recheado", price: 0, pictureUrl: "", string:"ninho" },
-            { id: 4, title: "Limão", category:"especial", price: 0, pictureUrl: "", string:"limao" },
-            { id: 5, title: "Nutella", category:"recheado", price: 0, pictureUrl: "", string:"nutella" },
-            { id: 6, title: "Branco", category:"tradicional", price: 0, pictureUrl: "", string:"branco" },
-            { id: 7, title: "Brigadeiro", category:"recheado", price: 0, pictureUrl: "", string:"brigadeiro" }
-        ];
+        const [data, setData] = useState(null)
+
+        useEffect(() => {
+            fetchItems();
+         }, []);
+
+         async function fetchItems(){
+           const res = await fetch("http://localhost:3000/db.json");
+           const result = await res.json();
+           setData(result.cookies)
+           console.log(data);
+         };
 
 
         return (
-            <ul className='flex flex-row'>
-                {cookies.map(item => <li key={item.id}> <Item title={item.title} category={item.category}  string={item.string}/> </li>)}
-            </ul>
+            <div className='flex flex-row flex-wrap gap-4'>
+                {data && data.map(item => <div key={item.id}> <Item sabor={item.sabor} categoria={item.categoria} imgUrl={item.imgUrl} string={item.string}/> </div>)}
+            </div>
         )
     }
 

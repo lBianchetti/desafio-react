@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 
-function ItemDetail( {desc, imgUrl, preco} ) {
+function ItemDetail( { id, sabor, categoria, imgUrl, string, preco, estoque } ) {
 
   return (
     <div>
@@ -9,7 +9,7 @@ function ItemDetail( {desc, imgUrl, preco} ) {
         <img src={imgUrl}></img>
         
         
-        <p>{desc}</p>
+        
         <span>R$ {preco}</span>
 
         <ItemCount stock={5} initial={1} />

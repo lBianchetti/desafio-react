@@ -1,18 +1,20 @@
 import React from 'react'
-import ItemCount from './ItemCount'
-import ItemDetailContainer from './ItemDetailContainer'
 import { Link } from 'react-router-dom'
 
-function Item({ id, title, category, price, pictureUrl, string }) {
+
+
+function Item({ id, sabor, categoria, imgUrl, string, preco, estoque }) {
 
 
 
     return (
-    <Link to={`/item/${string}`} className='p-4 m-4 w-[150px] h-[200px] bg-zinc-50 border-zinc-100 border flex flex-col'>
+    <Link to={`/${string}`} className='p-6 w-[500px] h-[500px] bg-zinc-50 border-zinc-100 border flex flex-col'>
         
-        {title}
+        <h2 className='font-bold text-3xl text-center pb-[30px]'>{sabor}</h2>
+
+        <img src={imgUrl} alt={string} className='w-[480px] h-[350px] object-cover'></img>
         
-        <span>{category}</span>
+        <span className='place-self-end self-end justify-self-end text-zinc-300'>{categoria}</span>
     </Link>
     )
 }

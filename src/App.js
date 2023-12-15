@@ -16,8 +16,8 @@ function App() {
 
         <Routes>
           <Route path='/' element={<ItemListContainer />} />
-          <Route path='/category/:id' element={<ItemListContainer />} />
-          <Route path='/item/:id' element={<ItemDetailContainer />} />
+          <Route path='/category/:id' element={<ItemListContainer />} /> {/*fazer CategoriaListContainer (copia do ItemListContainer mas com filtro de categoria como no ItemDetailContainer*/}
+          <Route path='/:string' element={<ItemDetailContainer />} />
 
           <Route path='*' element={<h2>Página não encontrada</h2>} />
         </Routes>

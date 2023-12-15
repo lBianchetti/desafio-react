@@ -1,24 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 
 function ItemDetailContainer( {id}) {
   
- function getItem() {
-    return {
-      id: 1,
-      desc: "description",
-      imgUrl: "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg",
-      preco: 1000
-    }
-  }
+  const [data, setData] = useState(null)
 
-  
-  const info = getItem()
+  useEffect(() => {
+      fetchItems();
+   }, []);
 
+   async function fetchItems(){
+     const res = await fetch("http://localhost:3000/db.json");
+     const result = await res.json();
+     setData(result.cookies.find(cookie => cookie.string === window.location.pathname.slice(1)))
+     console.log(data);
+   };
+
+   console.log(window.location.pathname.slice(1))
 
   return (
     <div className='container mx-auto md flex'>
-      <ItemDetail desc={info.desc} imgUrl={info.imgUrl} preco={info.preco}/>
+      {data && <ItemDetail sabor={data.sabor} categoria={data.categoria} imgUrl={data.imgUrl} string={data.string} preco={data.preco}/>}
     </div>
   )
 }
