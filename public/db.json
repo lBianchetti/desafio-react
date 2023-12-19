@@ -3,6 +3,7 @@
       {
         "id": 1,
         "sabor": "Gotas de Chocolate",
+        "desc": "Cookie de massa tradicional com gotas de chocolate.",
         "categoria": "tradicional",
         "imgUrl": "https://static.wixstatic.com/media/05cec1_99c80856b3c04b50b98885727b0e34e2~mv2.jpg/v1/fill/w_1000,h_1000,al_c,q_85/05cec1_99c80856b3c04b50b98885727b0e34e2~mv2.jpg",
         "string": "chocolate",
@@ -12,6 +13,7 @@
       {
         "id": 2,
         "sabor": "M&M's",
+        "desc": "Cookie de massa tradicional com gotas de chocolate e M&M's.",
         "categoria": "tradicional",
         "imgUrl": "https://www.confeiteiradesucesso.com/wp-content/uploads/2020/07/cookiemms-receita.jpg",
         "string": "mms",
@@ -21,6 +23,7 @@
       {
         "id": 3,
         "sabor": "Chocolate Branco",
+        "desc": "Cookie de massa tradicional com gotas de chocolate branco.",
         "categoria": "tradicional",
         "imgUrl": "https://confessionsofabakingqueen.com/wp-content/uploads/2019/05/white-chocolate-cookies-11-of-11.jpg",
         "string": "branco",
@@ -30,6 +33,7 @@
       {
         "id": 4,
         "sabor": "Limão",
+        "desc": "Cookie de massa tradicional com gotas de chocolate branco e raspas de limão.",
         "categoria": "especial",
         "imgUrl": "https://thecookiedoughdiaries.com/wp-content/uploads/2023/04/soft-lemon-cookies-featured.jpg",
         "string": "limao",
@@ -39,6 +43,7 @@
       {
         "id": 5,
         "sabor": "Macadâmia",
+        "desc": "Cookie de massa tradicional com gotas de chocolate branco e macadâmias.",
         "categoria": "especial",
         "imgUrl": "https://www.completelydelicious.com/wp-content/uploads/2021/09/white-chocolate-macadamia-nut-cookies-9.jpg",
         "string": "macadamia",
@@ -48,6 +53,7 @@
       {
         "id": 6,
         "sabor": "Frutas vermelhas",
+        "desc": "Cookie de massa tradicional com gotas de chocolate branco e frutas vermelhas.",
         "categoria": "especial",
         "imgUrl": "https://receitinhas.com.br/wp-content/uploads/2017/02/Depositphotos_21869743_m-2015-1200x959.jpg",
         "string": "frutas",
@@ -57,6 +63,7 @@
       {
         "id": 7,
         "sabor": "Brigadeiro",
+        "desc": "Cookie de massa tradicional com gotas de chocolate e recheio de brigadeiro gourmet.",
         "categoria": "recheado",
         "imgUrl": "https://diariodorio.com/wp-content/uploads/2021/09/American-Cookies-Cookie-Brigadeiro-Foto-Samir-Felix-scaled.jpg",
         "string": "brigadeiro",
@@ -66,6 +73,7 @@
       {
         "id": 8,
         "sabor": "Ninho",
+        "desc": "Cookie de massa de chocolate e recheio de brigadeiro d ninho.",
         "categoria": "recheado",
         "imgUrl": "https://brcookies.com.br/wp-content/uploads/2022/07/Cookie-de-ninho.jpg",
         "string": "ninho",
@@ -75,6 +83,7 @@
       {
         "id": 9,
         "sabor": "Nutella",
+        "desc": "Cookie de massa tradicional com gotas de chocolate e recheio de nutella.",
         "categoria": "recheado",
         "imgUrl": "https://biscoite.com.br/wp-content/uploads/2023/01/softnutella.jpg",
         "string": "nutella",

@@ -20,7 +20,7 @@ function ItemDetailContainer( {id}) {
 
   return (
     <div className='container mx-auto md flex'>
-      {data && <ItemDetail sabor={data.sabor} categoria={data.categoria} imgUrl={data.imgUrl} string={data.string} preco={data.preco}/>}
+      {data && <ItemDetail sabor={data.sabor} categoria={data.categoria} desc={data.desc} imgUrl={data.imgUrl} string={data.string} preco={data.preco} estoque={data.estoque}/>}
     </div>
   )
 }
