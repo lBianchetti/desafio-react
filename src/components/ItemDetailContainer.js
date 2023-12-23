@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
+import { GlobalContext } from '../context/GlobalContext'
+
 
 function ItemDetailContainer( {id}) {
   
+  const globalDados = React.useContext(GlobalContext)
   const [data, setData] = useState(null)
-
+  // setData(globalDados.cookies.find(cookie => cookie.string === window.location.pathname.slice(1)))
+  
   useEffect(() => {
-      fetchItems();
+    fetchItems();
    }, []);
 
    async function fetchItems(){
@@ -16,7 +20,7 @@ function ItemDetailContainer( {id}) {
      console.log(data);
    };
 
-   console.log(window.location.pathname.slice(1))
+  //  console.log(window.location.pathname.slice(1))
 
   return (
     <div className='container mx-auto md flex'>

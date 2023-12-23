@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 
 
 function ItemCount({ estoque, initial, onAdd, onRemove }) {
+
+    
     let [count, setCount] = useState(initial)
     let [isCarrinho, setIsCarrinho] = useState(true)
 

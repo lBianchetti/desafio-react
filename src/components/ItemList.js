@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Item from './Item'
-
+import { GlobalContext } from '../context/GlobalContext'
 
     function ItemList() {
 
-        const [data, setData] = useState(null)
+        const globalDados = React.useContext(GlobalContext)
+        const [data, setData] = useState(globalDados.cookies)
 
         useEffect(() => {
             fetchItems();
@@ -17,9 +18,8 @@ import Item from './Item'
            console.log(data);
          };
 
-
         return (
-            <div className='flex flex-row flex-wrap gap-4'>
+            <div className='flex flex-row flex-wrap gap-4' >
                 {data && data.map(item => <div key={item.id}> <Item sabor={item.sabor} categoria={item.categoria} imgUrl={item.imgUrl} string={item.string}/> </div>)}
             </div>
         )
