@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
-function ItemCount({ estoque, initial, onAdd, onRemove }) {
+function ItemCount({ estoque, initial, onAdd, onRemove, string }) {
+    let [cart, setCart] = useState([])
+      
 
-    
     let [count, setCount] = useState(initial)
     let [isCarrinho, setIsCarrinho] = useState(true)
 
+    
     function add() {
         if (count < estoque) {
             setCount(count + 1)

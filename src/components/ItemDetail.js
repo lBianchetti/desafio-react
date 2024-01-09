@@ -10,15 +10,20 @@ function ItemDetail({ id, sabor, desc, categoria, imgUrl, string, preco, estoque
 
 
   function onAdd(qtdToAdd) {
-    let newItemCattinho = {nome: sabor, preco: preco, qts: qtdToAdd}
+    let newItemCattinho = {nome: sabor, preco: preco, qts: qtdToAdd, string: string}
     itensNoCarrinho.push(newItemCattinho)
-    console.log("push ", itensNoCarrinho)
+    localStorage.setItem("carrinho", JSON.stringify(itensNoCarrinho))
+
+    console.log("push ")
   }
 
   function onRemove() {
     itensNoCarrinho.pop()
+    localStorage.setItem("carrinho", JSON.stringify(itensNoCarrinho))
     console.log("pop ", itensNoCarrinho)
   }
+
+
   return (
     <div className='p-4 pt-16 flex m-auto'>
 
@@ -31,7 +36,7 @@ function ItemDetail({ id, sabor, desc, categoria, imgUrl, string, preco, estoque
 
         <span>R$ {preco}</span>
 
-        <ItemCount estoque={estoque} initial={1} onAdd={onAdd} onRemove={onRemove}/>
+        <ItemCount estoque={estoque} initial={1} onAdd={onAdd} onRemove={onRemove} string={string}/>
       </div>
 
     </div>
