@@ -1,26 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-import { GlobalContext } from '../context/GlobalContext'
+import { useParams } from 'react-router-dom';
 
 
 function ItemDetailContainer( {id}) {
+
+  let param = useParams()
   
-  const globalDados = React.useContext(GlobalContext)
   const [data, setData] = useState(null)
-  // setData(globalDados.cookies.find(cookie => cookie.string === window.location.pathname.slice(1)))
   
   useEffect(() => {
     fetchItems();
-   }, []);
+    console.log(param.string)
+   }, [param]);
 
    async function fetchItems(){
      const res = await fetch("http://localhost:3000/db.json");
      const result = await res.json();
-     setData(result.cookies.find(cookie => cookie.string === window.location.pathname.slice(1)))
+     setData(result.cookies.find(cookie => cookie.string === param.string))
      console.log(data);
    };
-
-  //  console.log(window.location.pathname.slice(1))
 
   return (
     <div className='container mx-auto md flex'>

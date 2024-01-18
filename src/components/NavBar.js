@@ -10,7 +10,7 @@ function NavBar() {
                 <h1 className='place-self-start font-serif text-xl'><Link to="/">Mucca Cookies</Link></h1>
                 <ul className='flex gap-10'>
                     <li className='group'>
-                        <Link to="/category/tradicionais" >Tradicionais</Link>
+                        <Link to="/category/tradicional" >Tradicionais</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-20px] bg-[#171717] rounded-md'>
                             <ul>
                                 <li><Link to="">Chocolate</Link></li>
@@ -20,7 +20,7 @@ function NavBar() {
                         </nav>
                     </li>
                     <li className='group'>
-                        <Link to="/category/especiais">Especiais</Link>
+                        <Link to="/category/especial">Especiais</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-30px] bg-[#171717] rounded-md'>
                             <ul>
                                 <li><Link to="/limao">Limão</Link></li>
@@ -30,7 +30,7 @@ function NavBar() {
                         </nav>
                     </li>
                     <li className='group'>
-                        <Link to="/category/recheados">Recheados</Link>
+                        <Link to="/category/recheado">Recheados</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-50px] bg-[#171717] rounded-md'>
                             <ul>
                                 <li><Link to="">Brigadeiro</Link></li>

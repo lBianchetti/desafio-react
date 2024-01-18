@@ -12,7 +12,8 @@ export const CartContextProvider = ({ children }) => {
 
   const myFunction = () => {
     console.log('Function executed!');
-  };
+};
+
 
 
 
