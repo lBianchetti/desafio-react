@@ -6,14 +6,21 @@ import { useCartContext } from '../context/CartContext';
 
 
 function CartWidget() {
-  const { sharedState, itensNoCarrinho } = useCartContext()
+  const { itensNoCarrinho } = useCartContext()
+  const [carrinho, setCarrinho] = useState([])
 
-  const [count, setCount] = useState(0)
-  const carrinho = JSON.parse(localStorage.getItem("carrinho"))
+  const [count, setCount] = useState(0)  
+  const [length, setlength] = useState(0)  
+
+
+  
   
   useEffect(() => {  
-    setCount(carrinho.length)
-  }, [count, carrinho, itensNoCarrinho])
+    setCarrinho(itensNoCarrinho)
+    setlength(carrinho.length)
+    setCount(length)
+    console.log("widget update")
+  }, [itensNoCarrinho, count, setCount, carrinho, length])
   
 
   return (

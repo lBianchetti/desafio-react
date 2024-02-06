@@ -13,9 +13,9 @@ function NavBar() {
                         <Link to="/category/tradicional" >Tradicionais</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-20px] bg-[#171717] rounded-md'>
                             <ul>
-                                <li><Link to="">Chocolate</Link></li>
-                                <li><Link to="">M&M's</Link></li>
-                                <li><Link to="">Branco</Link></li>
+                                <li><Link to="/chocolate">Chocolate</Link></li>
+                                <li><Link to="/mms">M&M's</Link></li>
+                                <li><Link to="/branco">Branco</Link></li>
                             </ul>
                         </nav>
                     </li>
@@ -33,9 +33,9 @@ function NavBar() {
                         <Link to="/category/recheado">Recheados</Link>
                         <nav className='invisible absolute group-hover:visible p-5 ml-[-50px] bg-[#171717] rounded-md'>
                             <ul>
-                                <li><Link to="">Brigadeiro</Link></li>
-                                <li><Link to="">Ninho</Link></li>
-                                <li><Link to="">Nutella</Link></li>
+                                <li><Link to="/brigadeiro">Brigadeiro</Link></li>
+                                <li><Link to="/ninho">Ninho</Link></li>
+                                <li><Link to="/nutella">Nutella</Link></li>
                             </ul>
                         </nav>
                     </li>
