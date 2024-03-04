@@ -15,7 +15,7 @@ function ItemDetailContainer( {id}) {
    }, [param]);
 
    async function fetchItems(){
-     const res = await fetch("http://localhost:3000/db.json");
+     const res = await fetch("../db.json");
      const result = await res.json();
      setData(result.cookies.find(cookie => cookie.string === param.string))
      console.log(data);

@@ -10,7 +10,7 @@ import Item from './Item'
          }, [param]);
       
          async function fetchItems(){
-           const res = await fetch("http://localhost:3000/db.json");
+           const res = await fetch("../db.json");
            const result = await res.json();
            const found = result.cookies.filter(item => item.categoria === param.id)
            setData(found)
